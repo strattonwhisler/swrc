@@ -11,3 +11,5 @@ alias gctr="git commit -t $plugin_dir/reword.commit.txt"
 alias gcts="git commit -t $plugin_dir/squash.commit.txt"
 alias gctf="git commit -t $plugin_dir/fixup.commit.txt"
 
+# Utilities
+alias gusr="ruby $plugin_dir/git_user.rb"

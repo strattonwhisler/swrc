@@ -1,18 +1,18 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 tool = ARGV[0]
 
-tools = Hash.new
+$tools = Hash.new
 
 def add_tool(name, prefix)
-    tools[name] = prefix
-    tools[prefix] = prefix
+    $tools[name] = prefix
+    $tools[prefix] = prefix
 end
 
 add_tool("webstorm", "ws")
 add_tool("intellij", "ij")
 
-prefix = tools[tool]
+prefix = $tools[tool]
 
 if prefix == nil
     puts "Invalid editor name: #{tool}"
@@ -22,4 +22,4 @@ end
 
 system "ln", "-sfn", ".#{prefix}.idea", ".idea"
 
-puts "done"
+puts "Linked .idea to .#{prefix}.idea"

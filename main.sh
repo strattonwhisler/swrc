@@ -41,30 +41,11 @@ loadPlugins() {
 
 loadPlugins
 
+alias useidea="$swrc_dir/extern/useidea.rb"
+
 #TODO: Move these
 ## Android
 export ANDROID_SDK_ROOT=/Users/swhisler/.android/my-sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools
-
-## Jetbrains
-useidea() {
-    local name
-
-    case $1 in
-        "webstorm")
-            name="ws"
-            ;;
-        "intellij")
-            name="ij"
-            ;;
-        *)
-	    echo "Invalid editor name $1."
-	    echo "  Use: webstorm, intellij"
-            return 1;
-            ;;
-    esac
-
-    ln -sfn ".$name.idea" .idea
-}
 
 echo 'Done'
