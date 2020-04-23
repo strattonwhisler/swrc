@@ -1,3 +1,16 @@
+# OhMyZsh
+ZSH_THEME=""
+
+plugins=(
+    git
+    yarn
+    httpie
+    kubectl
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# SWRC
 echo -n 'Loading SWRC ... '
 
 swrc_dir="$(dirname $0)"
@@ -23,9 +36,11 @@ swrc_plugins=(
     git
     nvm
     xcode
-    #jabba
+    jabba
     rbenv
     lsd
+    fuck
+    yarn
 )
 
 loadPlugins() {

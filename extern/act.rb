@@ -1,5 +1,10 @@
 #!/usr/bin/ruby
 
+if ARGV.length == 0
+  $stderr.puts "act requires at least one argument"
+  exit 1
+end
+
 commands = Array.new
 
 $shorts = Hash.new
@@ -30,8 +35,10 @@ args.each do |arg|
 end
 
 begin
-    puts "activator #{commands.join ' '}"
-    exec "activator", *commands
+    #puts "activator #{commands.join ' '}"
+    #exec "activator", *commands
+    puts "sbt #{commands.join ' '}"
+    exec "sbt", *commands
 rescue SignalException
     exit 0
 end

@@ -1,0 +1,1 @@
+alias yl="yarn lint"
