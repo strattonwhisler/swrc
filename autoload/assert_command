@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+if (( ! $+commands[$1] ))
+then
+  print -P "$fg[red]${1} is not installed!$reset_color"
+  return 1
+fi
+

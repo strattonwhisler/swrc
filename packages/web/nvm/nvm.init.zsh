@@ -1,6 +1,6 @@
 export NVM_DIR="$HOME/.nvm"
 
-if [[ ! -d "$NVM_DIR" ]]; then print -P $fg[red]'nvm is not installed!'$reset_color; return 1; fi
+assert_directory "$NVM_DIR" 'nvm' || return 1
 
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 [[ -s "$NVM_DIR/bash_completion" ]] && source "$NVM_DIR/bash_completion"

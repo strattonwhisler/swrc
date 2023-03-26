@@ -3,6 +3,9 @@ print 'Loading SWRC'
 
 typeset -gx SWRC_DIR="$(dirname $0)"
 
+fpath=("$SWRC_DIR/autoload" $fpath)
+autoload "$SWRC_DIR/autoload/"*
+
 # OhMyZsh
 ZSH_THEME=""
 

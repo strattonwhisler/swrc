@@ -1,5 +1,5 @@
 export JABBA_DIR="$HOME/.jabba"
 
-if [[ ! -d "$JABBA_DIR" ]]; then print -P $fg[red]'jabba is not installed!'$reset_color; return 1; fi
+assert_directory "$JABBA_DIR" 'jabba' || return 1
 
 [[ -s "$JABBA_DIR/jabba.sh" ]] && source "$JABBA_DIR/jabba.sh"
