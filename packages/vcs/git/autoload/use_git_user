@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+if [[ ! -v 1 ]]
+then
+  print "No user name provided!"
+fi
+
+if [[ ! -v 1 ]]
+then
+  print "No user email provided!"
+fi
+
+__git::user::configure "$1" "$2"
+
+print "Configured git user to \"$1 <$2>\"."

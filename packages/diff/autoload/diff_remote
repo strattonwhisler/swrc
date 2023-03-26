@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+colordiff -B <(curl -s $1) <(curl -s $2)

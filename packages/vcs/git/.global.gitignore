@@ -1,0 +1,13 @@
+# MacOS
+.DS_Store
+
+# Jetbrains IDES
+.idea/
+.*.idea/
+
+# Environment presets
+.env
+*.env
+
+# SWRC
+.swrc-workspace

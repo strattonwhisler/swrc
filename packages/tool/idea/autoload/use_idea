@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+__idea::link "$1"
+
+print "Linked .idea for $1"

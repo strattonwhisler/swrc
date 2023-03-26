@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+use_git_user "Stratton Whisler" "stratton.whisler@briebug.com"
+
+export SWRC_GIT_UPSTREAM='origin'
+export SWRC_GIT_BRANCH_RELEASE='main'
+export SWRC_GIT_BRANCH_DEVELOP='develop'
+export SWRC_GIT_BRANCH_BASE='develop'
+export SWRC_GIT_BRANCH_WORKING='CHANGEME'

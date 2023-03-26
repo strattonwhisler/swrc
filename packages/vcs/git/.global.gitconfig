@@ -1,0 +1,19 @@
+[core]
+	excludesfile = ./.global.gitignore
+	editor = nvim
+	pager = delta
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	side-by-side = true
+	colorMoved = default
+	line-numbers = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true 
+	light = false

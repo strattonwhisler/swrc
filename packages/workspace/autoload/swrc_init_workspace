@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+cp "$SWRC_DIR/templates/.swrc-workspace" '.swrc-workspace'
+
+print "Initialized workspace"

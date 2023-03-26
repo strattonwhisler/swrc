@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+__idea::link "$1"
+
+print "Opening $1"
+
+__idea::open "$1"

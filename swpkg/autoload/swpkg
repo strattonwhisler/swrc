@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+case "$1" in
+  'load') __swpkg::command::load "$2" ;;
+  'list') __swpkg::command::list ;;
+  *) print "Unknown command $1!"; return 1 ;;
+esac

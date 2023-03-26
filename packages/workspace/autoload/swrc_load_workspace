@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+print 'Loading workspace'
+
+source '.swrc-workspace'
+
+print "Done"

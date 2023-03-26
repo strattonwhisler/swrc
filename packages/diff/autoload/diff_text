@@ -1,0 +1,2 @@
+#!/usr/bin/env zsh
+colordiff -B <(echo $1) <(echo $2)
