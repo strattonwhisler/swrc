@@ -23,6 +23,11 @@ alias gctr="git commit -t $package_dir/reword.commit.txt"
 alias gcts="git commit -t $package_dir/squash.commit.txt"
 alias gctf="git commit -t $package_dir/fixup.commit.txt"
 
+# Stashing
+alias gsta='git stash'
+alias gstaa='git stash apply'
+alias gstap='git stash pop'
+
 # Pushing
 alias gp='git push'
 alias gpup='git push --set-upstream $SWRC_GIT_UPSTREAM $SWRC_GIT_BRANCH_WORKING'
