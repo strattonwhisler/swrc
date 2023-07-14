@@ -2,6 +2,6 @@
 
 if [[ ! -d "$1" ]]
 then
-  print -P "$fg[red]${2} is not installed!$reset_color"
+  print -P "%F{red}${2} is not installed!%f"
   return 1
 fi

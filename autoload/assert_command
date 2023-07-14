@@ -2,7 +2,7 @@
 
 if (( ! $+commands[$1] ))
 then
-  print -P "$fg[red]${1} is not installed!$reset_color"
+  print -P "%F{red}${1} is not installed!%f"
   return 1
 fi
 

@@ -1,20 +1,20 @@
 # SWRC
-print 'Loading SWRC'
+
+## Preinit
+setopt prompt_subst
 
 typeset -gx SWRC_DIR="$(dirname $0)"
 
+source "$SWRC_DIR/theme.zsh"
+
+print -P "Loading %F{026}S%F{032}W%F{063}R%F{056}C${swrc_gray}...%f"
+#---
+
+## Autoload
 fpath=("$SWRC_DIR/autoload" $fpath)
 autoload "$SWRC_DIR/autoload/"*
 
-# OhMyZsh
-ZSH_THEME=""
-
-ZSH_DISABLE_COMPFIX=true
-
-source $ZSH/oh-my-zsh.sh
-
 ## Theme
-source "$SWRC_DIR/theme.zsh"
 source "$SWRC_DIR/af-magic-s.zsh-theme"
 
 ## Path
@@ -35,10 +35,11 @@ source "$SWRC_DIR/swpkg/init.zsh"
 
 export SWPKG_PATH="$SWRC_DIR/packages"
 
-print -P "Using packages $swrc_gray($swrc_lgray${swrc_packages[@]}$swrc_gray)$reset_color"
+print -P "Using packages $swrc_gray($swrc_lgray${swrc_packages[@]}$swrc_gray)%f"
 
 for _package in "${swrc_packages[@]}"; do
   swpkg load "$_package"
 done
 
-print -P $swrc_green'Done'
+#---
+print -P "${swrc_green}Done%f"
