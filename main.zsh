@@ -41,5 +41,7 @@ for _package in "${swrc_packages[@]}"; do
   swpkg load "$_package"
 done
 
+autoload -Uz compinit && compinit
+
 #---
 print -P "${swrc_green}Done%f"
