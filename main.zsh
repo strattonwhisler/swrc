@@ -21,14 +21,15 @@ source "$SWRC_DIR/af-magic-s.zsh-theme"
 export PATH=$HOME/bin:$PATH
 
 ## Aliases
-alias q="exit"
-alias clr="clear"
+alias l='ls -la'
+alias q='exit'
+alias clr='clear'
 alias rrc="source ~/.zshrc"
 alias desu="sudo !!"
 
 ## Editor
 export EDITOR='nvim'
-alias view="nvim -R"
+alias view='nvim -R'
 
 ## SWPKG
 source "$SWRC_DIR/swpkg/init.zsh"

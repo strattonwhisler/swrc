@@ -22,8 +22,8 @@ alias grhl="git reset HEAD^"
 alias gr!='git reset'
 
 # Pre-formatted Commits
-alias gctt="git commit -m $(cat $package_dir/temp.commit.txt)"
-alias gctd="git commit -t $package_dir/drop.commit.txt"
+alias gctt="git commit -m $(cat $package_dir/temp.commit.txt) -n"
+alias gctd="git commit -t $package_dir/drop.commit.txt -n"
 alias gctr="git commit -t $package_dir/reword.commit.txt"
 alias gcts="git commit -t $package_dir/squash.commit.txt"
 alias gctf="git commit -t $package_dir/fixup.commit.txt"
