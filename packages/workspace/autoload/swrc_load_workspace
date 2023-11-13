@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 
-print 'Loading workspace'
+if [[ -s '.swrc-workspace' ]]; then
+    print 'Loading workspace'
 
-source '.swrc-workspace'
+    source '.swrc-workspace'
 
-print "Done"
+    print "Done"
+fi
