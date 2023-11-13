@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
 if [[ -s '.swrc-workspace' ]]; then
-    print 'Loading workspace'
+  print -P "Loading workspace${swrc_gray}...%f"
+  #---
 
-    source '.swrc-workspace'
+  source '.swrc-workspace'
 
-    print "Done"
+  #---
+  print -P "${swrc_green}Done%f"
 fi
