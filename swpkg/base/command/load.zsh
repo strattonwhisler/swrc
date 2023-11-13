@@ -23,6 +23,35 @@ __swpkg::load_package () {
     source "$package_dir/$package_name.init.zsh" || return 1
   fi
 
+  # <package> base/*.zsh
+  if [[ -d "$package_dir/base" ]]
+  then
+    local -aU load_files
+
+    load_files+=( "$package_dir/base"/*.zsh(N-.) )
+
+    if (( $#load_files == 0 )); then
+      return 1
+    fi
+
+    fpath=(
+      "${load_files[@]:h}"
+      "${fpath[@]}"
+    )
+
+    for load_file in "${load_files[@]}"
+    do
+      if (( $+functions[$load_file] )); then
+        # already defined
+        continue
+      fi
+
+      autoload -Uz "${load_file:t}" &&
+        eval "${load_file:t}"       &&
+        unfunction "${load_file:t}"
+    done
+  fi
+
   # <package> autoloads
   if [[ -d "$package_dir/autoload" ]]
   then
