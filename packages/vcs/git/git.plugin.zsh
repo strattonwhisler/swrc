@@ -11,10 +11,15 @@ alias gst='git status'
 alias ga='git add'
 alias gaa='git add --all'
 
+# Changes
+alias grss='git restore --staged'
+alias grs='git restore'
+
 # Commits
 alias gc='git commit'
 alias gc!='git commit --amend'
 alias grhl="git reset HEAD^"
+alias gr!='git reset'
 
 # Pre-formatted Commits
 alias gctt="git commit -m $(cat $package_dir/temp.commit.txt)"
@@ -38,13 +43,13 @@ alias gco='git checkout'
 alias gbd='git branch -d'
 alias gbh='git branch -f $SWRC_GIT_BRANCH_WORKING HEAD'
 
-alias gcb='git checkout -b'
-alias gcb!='git_checkout_new_branch ""'
+alias gsc='git switch -c'
+alias gswc='git_switch_new_branch ""'
 
-alias gcw='git checkout $SWRC_GIT_BRANCH_WORKING'
-alias gcs='git checkout $SWRC_GIT_BRANCH_BASE'
-alias gcr='git checkout $SWRC_GIT_BRANCH_RELEASE'
-alias gcd='git checkout $SWRC_GIT_BRANCH_DEVELOP'
+alias gsw='git switch $SWRC_GIT_BRANCH_WORKING'
+alias gss='git switch $SWRC_GIT_BRANCH_BASE'
+alias gsr='git switch $SWRC_GIT_BRANCH_RELEASE'
+alias gsd='git switch $SWRC_GIT_BRANCH_DEVELOP'
 
 # Logs
 alias gloga='git log --oneline --decorate --graph --all'
@@ -56,9 +61,3 @@ alias grb='git rebase'
 alias grbi='git rebase -i'
 alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
-
-# Utilities
-function git_checkout_new_branch () {
-  export SWRC_GIT_BRANCH_WORKING=$1
-  git checkout -b $1
-}

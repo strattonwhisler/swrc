@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+if [[ ! -v 1 ]]
+then
+  print "No branch name provided!"
+fi
+
+__git::branch::create_and_track "$1"
